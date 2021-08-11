@@ -28,7 +28,8 @@ actions:
   - sh -c 'ln -s ../packaging/rpm/"${PACKIT_PROJECT_NAME_VERSION}".tar.gz dist/"${PACKIT_PROJECT_NAME_VERSION}".tar.gz'
   - sh -c 'echo packaging/rpm/"${PACKIT_PROJECT_NAME_VERSION}".tar.gz'
   # create-patches:
-  # fix-spec-file:
+  fix-spec-file:
+  - echo  # no-op
   get-current-version:
   - sh -c "python3 -m setuptools_scm | awk '{print $3}'"
   # post-upstream-clone:
