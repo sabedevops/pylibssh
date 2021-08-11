@@ -10,8 +10,10 @@ actions:
     bash -c '
     echo "upstream_version ${PACKIT_PROJECT_VERSION}"
     |
-    tee ~/.rpmmacros
+    tee "${HOME}"/.rpmmacros
     '
+  - bash -c 'ls -alh ~'
+  - bash -c 'ls -alh "${HOME}"'
   - >-
     bash -c '
     spectool
