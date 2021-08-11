@@ -1,4 +1,3 @@
-%dump
 %global pypi_name ansible-pylibssh
 
 # NOTE: The target version may be set dynamically via
@@ -8,7 +7,6 @@
 %if "%{!?upstream_version:UNSET}" == "UNSET"
 %global upstream_version %{upstream_version_fallback}
 %endif
-%dump
 
 %global python_importable_name pylibsshext
 # RHEL or CentOS:
