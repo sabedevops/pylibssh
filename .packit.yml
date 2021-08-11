@@ -8,7 +8,7 @@ actions:
   create-archive:
   - >-
     bash -c '
-    echo "upstream_version ${PACKIT_PROJECT_VERSION}"
+    echo %upstream_version "${PACKIT_PROJECT_VERSION}"
     |
     tee ~/.rpmmacros
     '
