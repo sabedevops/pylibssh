@@ -8,8 +8,13 @@ actions:
   create-archive:
   - >-
     bash -c '
+    echo "%global upstream_version ${PACKIT_PROJECT_VERSION}"
+    |
+    tee ~/.rpmmacros
+    '
+  - >-
+    bash -c '
     spectool
-    --define "upstream_version ${PACKIT_PROJECT_VERSION}"
     --all --get-files
     --sourcedir packaging/rpm/ansible-pylibssh.spec
     '
