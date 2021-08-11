@@ -5,7 +5,7 @@
 %global upstream_version_fallback %(ls -t dist/%{pypi_name}-*.tar.gz | head -n 1 | sed 's#^dist\\/%{pypi_name}-\\(.*\\)\\.tar\\.gz$#\\1#')
 # If "upstream_version" macro is unset, use the fallback defined above:
 %if "%{!?upstream_version:UNSET}" == "UNSET"
-%define upstream_version %{upstream_version_fallback}
+%global upstream_version %{upstream_version_fallback}
 %endif
 
 %global python_importable_name pylibsshext
